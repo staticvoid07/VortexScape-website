@@ -53,7 +53,7 @@ try {
             (SELECT COUNT(*) FROM hiscore AS t2 
             WHERE t2.type = h.type AND t2.value >= h.value) AS rank_in_skill
         FROM hiscore as h
-        INNER JOIN account as a ON h.account_id = a.id;
+        INNER JOIN account as a ON h.account_id = a.id
         ORDER BY skill_id ASC, level DESC, score DESC
     ";
 
