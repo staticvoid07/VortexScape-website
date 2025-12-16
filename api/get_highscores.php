@@ -95,10 +95,10 @@ try {
     $sql_total = "
         SELECT 
             a.username as player_name, 
-            h.level as level
+            h.level as level,
             h.value as score
         FROM hiscore_large as h
-        INNER JOIN account as a ON h.account_id = a.id;
+        INNER JOIN account as a ON h.account_id = a.id
         ORDER BY level DESC, score DESC
         LIMIT 30
     ";
