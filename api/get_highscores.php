@@ -43,7 +43,7 @@ try {
     // 1. FETCH SKILL HIGHSCORES (from the 'hiscore' table)
     // ===============================================
 
-    // We select the top 25 rows from the 'hiscore' table, sorted by score and skill_id
+    // We select the top 30 rows from the 'hiscore' table, sorted by score and skill_id
     $sql_skill = "
         SELECT 
             a.username as player_name, 
@@ -54,7 +54,7 @@ try {
             WHERE t2.type = h.type AND t2.value >= h.value) AS rank_in_skill
         FROM hiscore as h
         INNER JOIN account as a ON h.account_id = a.id;
-        ORDER BY skill_id ASC, score DESC
+        ORDER BY skill_id ASC, level DESC, score DESC
     ";
 
     $stmt_skill = $pdo->query($sql_skill);
@@ -99,7 +99,7 @@ try {
             h.value as score
         FROM hiscore_large as h
         INNER JOIN account as a ON h.account_id = a.id;
-        ORDER BY total_level DESC, total_score DESC
+        ORDER BY level DESC, score DESC
         LIMIT 30
     ";
     
