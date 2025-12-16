@@ -59,6 +59,7 @@ try {
 
     $stmt_skill = $pdo->query($sql_skill);
     $raw_skill_scores = $stmt_skill->fetchAll(PDO::FETCH_ASSOC);
+    $stmt_skill->closeCursor();
 
     // The rest of the loop logic remains the same, but we need to ensure the rank calculation logic is robust.
     // The subquery above is updated to correctly rank by level first, then score.
@@ -104,6 +105,7 @@ try {
     
     $stmt_total = $pdo->query($sql_total);
     $raw_total_scores = $stmt_total->fetchAll(PDO::FETCH_ASSOC);
+    $stmt_total->closeCursor();
     
     $total_id = 0; // Use 0 as the key for 'Total Score'
 
