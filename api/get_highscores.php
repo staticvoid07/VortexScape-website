@@ -96,7 +96,7 @@ try {
         SELECT 
             a.username as player_name, 
             h.level as level,
-            h.value as score
+            h.value DIV 10 as score
         FROM hiscore_large as h
         INNER JOIN account as a ON h.account_id = a.id
         ORDER BY level DESC, score DESC
