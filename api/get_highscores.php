@@ -137,7 +137,8 @@ try {
 } catch (PDOException $e) {
     // SECURITY NOTE: In a production site, return a generic error.
     // echo "Error: " . $e->getMessage(); // Uncomment for debugging
-    $response['message'] = 'Could not fetch data from the Vortexscape database.';
+    $response['message'] = $e->getMessage();
+    //$response['message'] = 'Could not fetch data from the Vortexscape database.';
 }
 
 echo json_encode($response);
