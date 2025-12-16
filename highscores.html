@@ -1,0 +1,249 @@
+Certainly. Here is Step 4 in its entirety, which updates the front-end HTML, CSS, and JavaScript to display the new level data and structure the output in a user-friendly, tabbed interface.
+
+This file is located at: /var/www/html/highscores.html
+
+Bash
+
+sudo nano /var/www/html/highscores.html
+Revised highscores.html (Entire Content)
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Your Game Name] Highscores</title>
+    <style>
+        /* Base Styling */
+        body { font-family: Arial, sans-serif; background-color: #282c34; color: #ffffff; margin: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1 { color: #61dafb; text-align: center; }
+        
+        /* --- Tab Navigation Styling --- */
+        .tabs { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            margin: 20px 0;
+            border-bottom: 2px solid #61dafb;
+        }
+        .tab-button {
+            background-color: transparent;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin: 0 5px 0 0;
+        }
+        .tab-button:hover {
+            background-color: #3c414c;
+        }
+        .tab-button.active {
+            color: #282c34;
+            background-color: #61dafb; 
+            border-radius: 5px 5px 0 0;
+            margin-bottom: -2px;
+        }
+        /* ------------------------------ */
+
+        /* --- Content Board Styling --- */
+        #highscores-container { 
+            background-color: #3c414c; 
+            padding: 20px; 
+            border-radius: 0 0 8px 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            min-height: 400px;
+        }
+        .skill-board {
+            display: none; 
+        }
+        .skill-board h2 { 
+            color: #ffcc00; 
+            text-align: center;
+            border-bottom: 2px solid #ffcc00; 
+            padding-bottom: 10px; 
+            margin-top: 0;
+        }
+        .score-entry { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 8px 0; 
+            border-bottom: 1px dotted #4a4f59;
+            font-size: 1.1em;
+        }
+        /* Style for the Rank, Player, Level, and Score columns */
+        .score-rank { width: 5%; font-weight: bold; }
+        .score-player { width: 45%; text-align: left; }
+        .score-level { 
+            font-weight: bold; 
+            color: #ffcc00; 
+            text-align: right; 
+            width: 15%; 
+        }
+        .score-value { 
+            font-weight: bold; 
+            color: #4CAF50; 
+            text-align: right; 
+            width: 25%;
+        }
+        .loading { text-align: center; font-size: 1.5em; padding-top: 50px; }
+        .navbar {
+            background-color: #1f2228; /* Darker bar */
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+        .navbar a {
+            color: #61dafb;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+        .navbar a:hover {
+            background-color: #3c414c;
+        }
+        .navbar .active-link {
+            color: #ffffff;
+            background-color: #4CAF50; /* Green highlight for the current page */
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="active-link">Home</a>
+    <a href="highscores.html">Highscores</a>
+</div>
+
+<div class="container">
+    <h1>VortexScape Highscores</h1>
+    
+    <div class="tabs" id="skill-tabs"></div>
+    
+    <div id="highscores-container">
+        <div class="loading" id="loading-status">Loading highscores...</div>
+        </div>
+</div>
+
+<script>
+    let ALL_HIGHSCORES_DATA = [];
+
+    // Function to render the selected board
+    function renderBoard(skillId) {
+        const boards = document.querySelectorAll('.skill-board');
+        const buttons = document.querySelectorAll('.tab-button');
+        
+        // 1. Hide all boards and deactivate all buttons
+        boards.forEach(board => board.style.display = 'none');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // 2. Show the active board and activate the button
+        const activeBoard = document.getElementById(`board-${skillId}`);
+        const activeButton = document.getElementById(`tab-${skillId}`);
+
+        if (activeBoard) {
+            activeBoard.style.display = 'block';
+        }
+        if (activeButton) {
+            activeButton.classList.add('active');
+        }
+    }
+
+    // Function to build tabs and initial boards
+    function buildInterface(data) {
+        ALL_HIGHSCORES_DATA = data.data;
+        const tabsContainer = document.getElementById('skill-tabs');
+        const contentContainer = document.getElementById('highscores-container');
+        document.getElementById('loading-status').style.display = 'none';
+
+        let firstSkillId = null;
+
+        ALL_HIGHSCORES_DATA.forEach(skill => {
+            const skillId = skill.id;
+            const skillName = skill.name;
+            
+            if (firstSkillId === null) {
+                firstSkillId = skillId; // Set the first skill (Total Score) to be the default active tab
+            }
+
+            // --- A. Create Tab Button ---
+            const button = document.createElement('button');
+            button.className = 'tab-button';
+            button.id = `tab-${skillId}`;
+            button.textContent = skillName;
+            button.onclick = () => renderBoard(skillId); // Attach click handler
+            tabsContainer.appendChild(button);
+
+            // --- B. Create Score Board (Content) ---
+            const board = document.createElement('div');
+            board.className = 'skill-board';
+            board.id = `board-${skillId}`;
+            
+            let html = `<h2>${skillName} Highscores</h2>`;
+            
+            // Add a header row for clarity
+            html += `<div class="score-entry" style="border-bottom: 2px solid #555;">
+                        <span class="score-rank">#</span>
+                        <span class="score-player">Player Name</span>
+                        <span class="score-level">Level</span>
+                        <span class="score-value">Score</span>
+                    </div>`;
+
+            if (skill.scores.length === 0) {
+                 html += '<p style="text-align:center;">No scores recorded yet.</p>';
+            } else {
+                 skill.scores.forEach(entry => {
+                    // Score Entry Template - Now includes Level
+                    html += `
+                        <div class="score-entry">
+                            <span class="score-rank">#${entry.rank}</span>
+                            <span class="score-player">${entry.player}</span>
+                            <span class="score-level">Lvl: ${entry.level}</span>
+                            <span class="score-value">${entry.score.toLocaleString()}</span>
+                        </div>
+                    `;
+                });
+            }
+            
+            board.innerHTML = html;
+            contentContainer.appendChild(board);
+        });
+
+        // 3. Show the first skill board by default
+        if (firstSkillId !== null) {
+            renderBoard(firstSkillId);
+        }
+    }
+
+    // Function to fetch data (same as before)
+    function fetchHighscores() {
+        fetch('/api/get_highscores.php') 
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    buildInterface(data);
+                } else {
+                    document.getElementById('loading-status').innerText = data.message || "Failed to load highscores.";
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                document.getElementById('loading-status').innerText = "Error connecting to the server API.";
+            });
+    }
+
+    // Initialize the fetch when the page loads
+    window.onload = fetchHighscores;
+</script>
+
+</body>
+</html>

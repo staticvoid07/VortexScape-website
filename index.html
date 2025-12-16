@@ -91,9 +91,33 @@
             list-style-type: disc;
             margin-left: 20px;
         }
+        .navbar {
+            background-color: #1f2228; /* Darker bar */
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+        .navbar a {
+            color: #61dafb;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+        .navbar a:hover {
+            background-color: #3c414c;
+        }
+        .navbar .active-link {
+            color: #ffffff;
+            background-color: #4CAF50; /* Green highlight for the current page */
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="highscores.html" class="active-link">Highscores</a>
+    </div>
     <div class="container">
         <h1>Welcome to VortexScape!</h1>
         <br />
