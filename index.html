@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VortexScape</title>
+    <style>
+        /* Basic Styling for the whole page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34; /* Dark background */
+            color: #ffffff; /* White text */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center content */
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #3c414c; /* Slightly lighter background for the content box */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Heading styles */
+        h1 {
+            color: #61dafb; /* Light blue header */
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-top: 30px;
+        }
+
+        /* Download Button Styling */
+        .download-button {
+            display: inline-block;
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .link {
+            color: #ffcc00; /* Bright yellow */
+            text-decoration: none; /* Remove the underline */
+            font-size: 1.2em; /* Slightly larger text */
+            font-weight: bold;
+            padding: 5px 10px;
+            background-color: #4a4f59;
+            border-radius: 4px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .link:hover {
+            color: #fff; /* White text on hover */
+            background-color: #ffcc00; /* Yellow background on hover */
+        }
+        
+        /* Patch Notes Styling */
+        .patch-notes-section {
+            text-align: left; /* Align text to the left within this section */
+            margin-top: 40px;
+            padding: 15px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            background-color: #333740;
+        }
+
+        .patch-version {
+            color: #ffcc00; /* Yellow for version numbers */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .patch-list {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to VortexScape!</h1>
+        <br />
+        <p>A modified version of 2004scape that functions as an idle game.</p>
+        <p>Everyone is an ironman, every item is stackable, most skilling actions will infinitely repeat, skilling resources never deplete, you don't lose items on death, and Hans will complete quests for you for 100k each (you still get the quest reward), heroes and legends quest cost 500k.</p>
+        <br />
+        <p>To play open the client and click on "Existing user", type a user and password and if it doesn't already exist you will be registered in.</p>
+        <br />
+        <p>DO NOT FORGET YOUR PASSWORD, I HAVE NO EASY WAY OF RESETTING THEM YET.</p>
+        <br />
+        <p>
+            <a class="link" href="https://github.com/staticvoid07/Server">
+                This project is open source.
+            </a>
+        </p>
+        <br />
+        <p>You can use the webclient but it's not recommended.</p>
+        <p>You should use the Java client instead, the web client crashes in some places</p>
+        <p>
+            <a class="link" href="http://151.241.99.9:8888/rs2.cgi">
+                Webclient
+            </a>
+        </p>
+        <br />
+        <h2>Download the Java Client</h2>
+        <p>Click the link below to download the latest game client:</p>
+        <p>
+            <a href="vortexscape-java-client.zip" download class="download-button">
+                Download VortexScape Client (Version 1.0)
+            </a>
+        </p>
+        <br />
+        <p>You need Java installed to run the client.</p>
+        <p>
+            <a class="link" href="https://adoptium.net/temurin/releases">
+                Download Java
+            </a>
+        </p>
+    </div>
+    <div class="patch-notes-section">
+        <h2>Changelog</h2>
+        <div class="patch-version">Dec. 11th 2025</div>
+        <ul class="patch-list">
+            <li>removed prayer drain</li>
+            <li>removed the waiting period to sell items to vendors after you steal from their stall</li>
+            <li>changes to aggro npc list (scroll down for full list)</li>
+            <li>completing rune mysteries with Hans now gives an air talisman</li>
+            <li>increased thieving by 25 on pickpocket success checks</li>
+            <li>you can now enter the waterfall dungeon without glarial's amulet if you already completed the quest</li>
+            <li>all npc drops will drop into the inventory</li>
+            <li>father aereck will give you an incinerator ring if you have 100 quest points</li>
+            <li>having the incinerator ring equipped or in the inventory will incinerate bones for 100% prayer xp</li>
+        </ul>
+        <div class="patch-version">Dec. 12th 2025</div>
+        <ul class="patch-list">
+            <li>fixed the skilling interruption bug (woodcutting, thieving stalls, smelting, and others used to get interrupted randomly)</li>
+            <li>changed dark wizards' drop table to give herblore secondaries, as there is no good way of afking secondaries</li>
+            <li>added more npcs that are infinitely aggressive and hunt range of 5, and respawn rate of 5 ticks (scroll down for npc list)</li>
+        </ul>
+        <div class="patch-version">Dec. 13th 2025</div>
+        <ul class="patch-list">
+            <li>changed buy-50 to buy-250</li>
+            <li>added a sell-5000 option</li>
+            <li>fixed charged jewellery deleting the entire stack instead of just one when you used a charge</li>
+            <li>mage arena capes drop to the inventory (to fix a game crash)</li>
+        </ul>
+        <div class="patch-version">Dec. 14th 2025</div>
+        <ul class="patch-list">
+            <li>Dec. 14th 2025</li>
+            <li>fixed amulet of glory deleting entire stack when using a charge</li>
+            <li>drops from npcs drop to the floor when the inventory is full, instead of just getting deleted</li>
+            <li>disabled buying the priest in peril quest as it's still in development</li>
+            <li>pulled the latest updates from this revision into the server (just some new quest journals)</li>
+            <li>some stackable item related fixes:</li>
+            <li>disabled decanting potions</li>
+            <li>fixed logic when applying weapon poison</li>
+            <li>fixed jewellery enchanting logic</li>
+            <li>fixed drinking poison chalices</li>
+            <li>fixed drinking antipoisons</li>
+            <li>fixed drinking antifires</li>
+            <li>fixed emptying containers such as pies and potions</li>
+            <li>fixed amulet of glory deleting entire stack when using a charge</li>
+            <li>fixed charging glories turning the whole stack into one</li>
+        </ul>
+        <div class="patch-version">Dec. 15th 2025</div>
+        <ul class="patch-list">
+            <li>changed shop logic to allow buying any amount of anything that is in stock</li>
+            <li>changed nature runes to 80 gp</li>
+            <li>removed spam click alchemy spells</li>
+            <li>removed spam click superheating</li>
+            <li>combat boosts never tick down</li>
+            <li>family crest npcs will give you their gauntlet after quest completion</li>
+            <li>removed bronze bars from all shop stocks</li>
+        </ul>
+        <div class="patch-version">Dec. 16th 2025</div>
+        <ul class="patch-list">
+            <li>you now mine 3 rune essence at a time at level 85 runecraft, and 5 at a time at 99</li>
+        </ul>
+        <h2>Aggressive npc list</h2>
+        <ul class="patch-list">
+            <li>chickens</li>
+            <li>cows</li>
+            <li>chaos druids</li>
+            <li>chaos druid warriors</li>
+            <li>dark wizards</li>
+            <li>giants</li>
+            <li>moss giants</li>
+            <li>fire giants</li>
+            <li>frost giants</li>
+            <li>baby dragons</li>
+            <li>baby blue dragons</li>
+            <li>green dragons</li>
+            <li>blue dragons</li>
+            <li>red dragons</li>
+            <li>black dragons</li>
+            <li>salarin the twisted</li>
+            <li>shadow warriors</li>
+        </ul>
+    </div>
+
+</body>
+</html>
