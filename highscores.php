@@ -91,7 +91,7 @@
                         <div class="score-entry">
                             <span class="score-rank">#${entry.rank}</span>
                             <span class="score-player">
-                                <a href="player.html?user=${encodeURIComponent(entry.player)}" class="player-link">
+                                <a href="player.php?user=${encodeURIComponent(entry.player)}" class="player-link">
                                     ${entry.player}
                                 </a>
                             </span>

@@ -150,7 +150,7 @@ h2 {
     color: #cccccc;
 }
 
-.ip-link {
+.link {
     color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
@@ -162,7 +162,7 @@ h2 {
     border: 1px solid #4a4f59;
 }
 
-.ip-link:hover {
+.link:hover {
     background-color: #ffcc00;
     color: #282c34;
 }
