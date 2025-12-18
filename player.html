@@ -5,8 +5,26 @@
     <title>Player Profile</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #282c34; color: #ffffff; margin: 0; }
-        .navbar { background-color: #1f2228; padding: 10px; text-align: center; margin-bottom: 20px; }
-        .navbar a { color: #61dafb; text-decoration: none; padding: 10px; font-weight: bold; }
+        .navbar {
+            background-color: #1f2228; /* Darker bar */
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+        .navbar a {
+            color: #61dafb;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+        .navbar a:hover {
+            background-color: #3c414c;
+        }
+        .navbar .active-link {
+            color: #ffffff;
+            background-color: #4CAF50; /* Green highlight for the current page */
+        }
         .container { max-width: 600px; margin: auto; background: #3c414c; padding: 20px; border-radius: 8px; }
         h1 { color: #ffcc00; text-align: center; }
         .stat-row { 
@@ -44,8 +62,8 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html">Download Client</a>
-        <a href="highscores.html">Highscores</a>
+        <a href="index.html">Home</a>
+        <a href="highscores.html" class="active-link">Highscores</a>
     </div>
 
     <div class="container">
