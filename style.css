@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* 2. SHARED LAYOUT */
+.container {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffcc00;
+    margin: 20px 0;
+}
+
+/* 3. NAVIGATION BAR 
+   Since this is in style.css, it will look identical on all pages */
+.navbar {
+    background-color: #1f2228;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar a {
+    color: #61dafb;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar a:hover {
+    background-color: #3c414c;
+    color: #ffffff;
+}
+
+.navbar .active-link {
+    color: #ffffff;
+    background-color: #4CAF50;
+}
+
+/* 4. HIGHSCORES & PLAYER TABLES 
+   Used in both highscores.php and player.php */
+.score-entry, .stat-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 15px; 
+    border-bottom: 1px solid #4a4f59;
+    background-color: #3c414c;
+    transition: background 0.2s;
+}
+
+.score-entry:hover {
+    background-color: #444a56;
+}
+
+.score-rank { width: 10%; font-weight: bold; text-align: left; }
+.score-player, .stat-name { width: 40%; text-align: left; font-weight: bold; }
+.score-level, .stat-lvl { width: 20%; color: #ffcc00; font-weight: bold; text-align: center; }
+.score-value, .stat-val { width: 30%; color: #4CAF50; text-align: right; font-family: monospace; }
+
+/* 5. LINKS & BUTTONS */
+.player-link {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.player-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* 6. TAB NAVIGATION (For highscores.php) */
+.tabs { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-bottom: 0;
+}
+
+.tab-button {
+    background-color: #1f2228;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 4px 4px 0 0;
+}
+
+.tab-button.active {
+    background-color: #3c414c;
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+}
