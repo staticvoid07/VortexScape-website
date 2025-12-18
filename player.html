@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Profile</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #282c34; color: #ffffff; margin: 0; }
+        .navbar { background-color: #1f2228; padding: 10px; text-align: center; margin-bottom: 20px; }
+        .navbar a { color: #61dafb; text-decoration: none; padding: 10px; font-weight: bold; }
+        .container { max-width: 600px; margin: auto; background: #3c414c; padding: 20px; border-radius: 8px; }
+        h1 { color: #ffcc00; text-align: center; }
+        .stat-row { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #4a4f59; }
+        .stat-name { font-weight: bold; color: #61dafb; }
+        .stat-val { color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Download Client</a>
+        <a href="highscores.html">Highscores</a>
+    </div>
+
+    <div class="container">
+        <h1 id="player-name">Loading...</h1>
+        <div id="stats-content"></div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('user');
+
+        if (!username) {
+            document.getElementById('player-name').innerText = "Player not found";
+        } else {
+            fetch(`/api/get_player.php?user=${encodeURIComponent(username)}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('player-name').innerText = data.player;
+                        let html = '';
+                        data.stats.forEach(s => {
+                            html += `
+                                <div class="stat-row">
+                                    <span class="stat-name">${s.name}</span>
+                                    <span>Lvl: ${s.level}</span>
+                                    <span class="stat-val">${s.score.toLocaleString()}</span>
+                                </div>`;
+                        });
+                        document.getElementById('stats-content').innerHTML = html;
+                    } else {
+                        document.getElementById('player-name').innerText = "Player not found";
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

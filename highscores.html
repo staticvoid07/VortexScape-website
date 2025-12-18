@@ -191,7 +191,11 @@
                     html += `
                         <div class="score-entry">
                             <span class="score-rank">#${entry.rank}</span>
-                            <span class="score-player">${entry.player}</span>
+                            <span class="score-player">
+                                <a href="player.html?user=${encodeURIComponent(entry.player)}" style="color: #61dafb; text-decoration: none;">
+                                    ${entry.player}
+                                </a>
+                            </span>
                             <span class="score-level">Lvl: ${entry.level}</span>
                             <span class="score-value">${entry.score.toLocaleString()}</span>
                         </div>
