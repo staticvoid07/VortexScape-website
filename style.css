@@ -127,3 +127,58 @@ h2 {
     color: #ffcc00;
     border-bottom: 2px solid #ffcc00;
 }
+
+.patch-notes-section {
+    text-align: left;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #333740;
+}
+
+.patch-version {
+    color: #ffcc00;
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+}
+
+.patch-list {
+    margin-left: 20px;
+    margin-top: 5px;
+    color: #cccccc;
+}
+
+.ip-link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 12px;
+    background-color: #1f2228;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #4a4f59;
+}
+
+.ip-link:hover {
+    background-color: #ffcc00;
+    color: #282c34;
+}
+
+.download-button {
+    color: #ffffff !important; /* Force white text */
+    font-weight: bold;
+    display: inline-block;
+    background-color: #4CAF50;
+    padding: 15px 32px;
+    text-decoration: none !important;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+    color: #ffffff !important;
+}
