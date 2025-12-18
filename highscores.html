@@ -100,6 +100,16 @@
             color: #ffffff;
             background-color: #4CAF50; /* Green highlight for the current page */
         }
+        .player-link {
+            color: #61dafb; /* Light blue to match your header */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.2s;
+        }
+
+        .player-link:hover {
+            color: #ffffff; /* Turn white on hover */
+            text-decoration: underline; /* Add underline back on hover */
+        }
     </style>
 </head>
 <body>
@@ -187,12 +197,11 @@
                  html += '<p style="text-align:center;">No scores recorded yet.</p>';
             } else {
                  skill.scores.forEach(entry => {
-                    // Score Entry Template - Now includes Level
                     html += `
                         <div class="score-entry">
                             <span class="score-rank">#${entry.rank}</span>
                             <span class="score-player">
-                                <a href="player.html?user=${encodeURIComponent(entry.player)}" style="color: #61dafb; text-decoration: none;">
+                                <a href="player.html?user=${encodeURIComponent(entry.player)}" class="player-link">
                                     ${entry.player}
                                 </a>
                             </span>

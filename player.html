@@ -9,9 +9,37 @@
         .navbar a { color: #61dafb; text-decoration: none; padding: 10px; font-weight: bold; }
         .container { max-width: 600px; margin: auto; background: #3c414c; padding: 20px; border-radius: 8px; }
         h1 { color: #ffcc00; text-align: center; }
-        .stat-row { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #4a4f59; }
-        .stat-name { font-weight: bold; color: #61dafb; }
-        .stat-val { color: #4CAF50; }
+        .stat-row { 
+            display: flex; 
+            align-items: center; /* Vertically center items */
+            padding: 12px 15px; 
+            border-bottom: 1px solid #4a4f59; 
+            font-size: 1.1em;
+        }
+
+        .stat-name { 
+            flex: 2; /* Takes up the most space */
+            font-weight: bold; 
+            color: #61dafb; 
+            text-align: left;
+        }
+
+        .stat-lvl { 
+            flex: 1; /* Takes up a fixed ratio of space */
+            color: #ffcc00; 
+            text-align: center; /* This centers the level text in its column */
+            font-weight: bold;
+            background: #282c34; /* Small background to make it pop */
+            border-radius: 4px;
+            padding: 2px 5px;
+        }
+
+        .stat-val { 
+            flex: 2; 
+            color: #4CAF50; 
+            text-align: right; /* Aligns the score to the far right */
+            font-family: monospace; /* Monospace makes numbers line up better */
+        }
     </style>
 </head>
 <body>
@@ -39,13 +67,13 @@
                         document.getElementById('player-name').innerText = data.player;
                         let html = '';
                         data.stats.forEach(s => {
-                            html += `
-                                <div class="stat-row">
-                                    <span class="stat-name">${s.name}</span>
-                                    <span>Lvl: ${s.level}</span>
-                                    <span class="stat-val">${s.score.toLocaleString()}</span>
-                                </div>`;
-                        });
+                        html += `
+                            <div class="stat-row">
+                                <span class="stat-name">${s.name}</span>
+                                <span class="stat-lvl">Lvl ${s.level}</span>
+                                <span class="stat-val">${s.score.toLocaleString()}</span>
+                            </div>`;
+                    });
                         document.getElementById('stats-content').innerHTML = html;
                     } else {
                         document.getElementById('player-name').innerText = "Player not found";
