@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>VortexScape Highscores</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 <body>
 
