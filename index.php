@@ -17,10 +17,10 @@
             <summary>Learn More about VortexScape Mechanics</summary>
             <div class="details-content">
                 <p>Everyone is an ironman, every item is stackable, and most skilling actions infinitely repeat.</p>
-                <p>Resources never deplete, you don't lose items on death, and Hans will complete quests for you for 100k each (you still get the quest reward), heroes and legends quest cost 500k.</p>
-                <p>Every skill has an idle way of being trained; agility courses auto-complete, fishing spots never move, and pickpocketing/stealing from stalls repeats automatically.</p>
-                <p>Some NPCs are always aggressive, all loot drops into your inventory and your prayer points never drain.</p>
-                <p>Please read the patch notes if you'd like to learn more.</p>
+                <p>Resources never deplete, you don't lose items on death, and Hans will complete quests for you for 100k each.</p>
+                <p>Every skill has an idle way of being trained; agility courses auto-complete and fishing spots never move.</p>
+                <p>Some NPCs are always aggressive, all loot drops into your inventory, and your prayer points never drain.</p>
+                <p style="text-align: center; color: #ffcc00; padding-left: 0;"><i>Please read the patch notes if you'd like to learn more.</i></p>
             </div>
         </details>
         
