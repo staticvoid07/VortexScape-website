@@ -335,7 +335,7 @@ h2 {
     to {
         opacity: 1;
         transform: translateY(0);
-        max-height: 500px; /* Large enough for your text */
+        max-height: 1200px; /* Large enough for your text */
     }
 }
 
