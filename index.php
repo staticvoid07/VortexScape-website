@@ -18,7 +18,7 @@
             <div class="details-content">
                 <p>Everyone is an ironman, every item is stackable, and most skilling actions infinitely repeat (even spells like superheat and alchemy).</p>
                 <p>Resources never deplete, you don't lose items on death, and Hans will complete quests for you for 100k each (Heroe's and Legend's cost 500k).</p>
-                <p>Every skill has an idle way of being trained; agility courses auto-complete, fishing spots never move, you atomatically pickpocket and steal from stalls, lighting a fire acts as a bonfire.</p>
+                <p>Every skill has an idle way of being trained; agility courses auto-complete, fishing spots never move, you automatically pickpocket and steal from stalls, lighting a fire acts as a bonfire.</p>
                 <p>You mine rune essence faster at levels 85 and 99 Runecraft, crafting runes at an altar will use 28 essence at a time.</p>
                 <p>You can pickpocket druids for herblore secondaries, Father Aereck will give you a bone incinerator ring at 100 quest points.</p>
                 <p>Some NPCs are always aggressive, combat stat boosts never tick down, all loot drops into your inventory, and your prayer points never drain.</p>
