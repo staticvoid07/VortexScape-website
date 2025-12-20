@@ -324,3 +324,49 @@ h2 {
     color: #61dafb; /* Matches your blue theme color */
     font-weight: bold;
 }
+
+/* 1. Define the animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 500px; /* Large enough for your text */
+    }
+}
+
+/* 2. Apply it to the content box when open */
+.learn-more[open] .details-content {
+    animation: slideDown 0.4s ease-out forwards;
+    overflow: hidden;
+}
+
+/* 3. Smooth the arrow rotation */
+.learn-more summary::after {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease; /* Adds the spin animation to the arrow */
+}
+
+.learn-more[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.learn-more {
+    background: rgba(60, 65, 76, 0.5);
+    border: 1px solid #4a4f59;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 700px;
+    display: block;
+    transition: all 0.3s ease; /* Smooths the background/border changes */
+}
+
+.learn-more[open] {
+    background: rgba(60, 65, 76, 0.8); /* Slightly darker when open for focus */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
