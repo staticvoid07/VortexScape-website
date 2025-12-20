@@ -32,14 +32,6 @@
     <hr class="section-divider">
 
     <div class="info-box" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px;">
-        <h2 style="margin-top: 0;">How to Play</h2>
-        <p>Open the client and click "Existing User". Type a username and password; if it doesn't exist, you will be registered automatically.</p>
-        <p style="color: #ff4444; font-weight: bold;">DO NOT FORGET YOUR PASSWORD. There is currently no way to reset them.</p>
-    </div>
-
-    <hr class="section-divider">
-
-    <div class="info-box" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px;">
 
         <h2>Download the Java Client</h2>
         
@@ -53,6 +45,17 @@
             </a>
         </p>
     </div>
+    
+    <hr class="section-divider">
+
+    <div class="info-box" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px;">
+        <h2 style="margin-top: 0;">How to Play</h2>
+        <p>Open the client and click "Existing User". Type a username and password; if it doesn't exist, you will be registered automatically.</p>
+        <p style="color: #ff4444; font-weight: bold;">DO NOT FORGET YOUR PASSWORD. There is currently no way to reset them.</p>
+    </div>
+
+    <hr class="section-divider">
+
     <div class="patch-notes-section">
         <h2>Patch notes</h2>
         <div class="patch-version">Dec. 11th 2025</div>
