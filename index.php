@@ -22,6 +22,7 @@
                 <p>You mine rune essence faster at levels 85 and 99 Runecraft, crafting runes at an altar will use 28 essence at a time.</p>
                 <p>You can pickpocket druids for herblore secondaries, Father Aereck will give you a bone incinerator ring at 100 quest points.</p>
                 <p>Some NPCs are always aggressive, combat stat boosts never tick down, all loot drops into your inventory, and your prayer points never drain.</p>
+                <p>You can buy any amount of items from a shop as long as it's in stock, prices never change when buying or selling.</p>
                 <p style="text-align: center; color: #ffcc00; padding-left: 0;"><i>Please read the patch notes if you'd like to learn more.</i></p>
             </div>
         </details>
