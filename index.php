@@ -141,6 +141,11 @@
             <li>deployed more changes from this revision, including troll stronghold, law runecrafting and KQ</li>
             <li>Hans can now complete every quest available in the quest journal</li>
         </ul>
+        <div class="patch-version">Dec. 21st 2025</div>
+        <ul class="patch-list">
+            <li>fixed weapon unequipping game crash</li>
+            <li>guards and stall owners no longer aggro when stealing from stalls</li>
+        </ul>
         <h2>Aggressive NPC list</h2>
         <ul class="patch-list">
             <li>chickens</li>
