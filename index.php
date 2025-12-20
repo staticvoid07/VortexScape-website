@@ -134,7 +134,7 @@
         </ul>
         <div class="patch-version">Dec. 20th 2025</div>
         <ul class="patch-list">
-            <li>increased thieving delays of stalls to make them a viable idle method</li>
+            <li>decreased thieving delays of stalls to make them a viable idle method</li>
             <li>removed the ability to click thieving stalls repeatedly for faster xp</li>
             <li>ranged ammo will automatically be picked up after it's used</li>
             <li>changed crafting and herblore skill delays to match osrs, as they had no delays in 2004</li>
