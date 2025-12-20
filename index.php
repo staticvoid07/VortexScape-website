@@ -44,7 +44,7 @@
         </a>
         <p>You need Java installed to run the client.</p>
         <p>
-            <a class="link" href="https://adoptium.net/temurin/releases">
+            <a href="https://adoptium.net/temurin/releases" target="_blank" class="badge">
                 Download Java
             </a>
         </p>
