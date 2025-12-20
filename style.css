@@ -265,12 +265,15 @@ h2 {
 }
 
 .learn-more {
-    background: rgba(60, 65, 76, 0.5); /* Semi-transparent background */
+    /* Existing background and border styles... */
+    background: rgba(60, 65, 76, 0.5);
     border: 1px solid #4a4f59;
     border-radius: 8px;
-    margin: 20px auto;
+
     max-width: 700px;
-    text-align: left; /* Better for reading lists of mechanics */
+    margin: 20px auto;
+    display: block;
+    
     overflow: hidden;
 }
 
@@ -279,10 +282,10 @@ h2 {
     cursor: pointer;
     font-weight: bold;
     color: #61dafb;
-    list-style: none; /* Removes default arrow in some browsers */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 /* Custom arrow using a pseudo-element */
