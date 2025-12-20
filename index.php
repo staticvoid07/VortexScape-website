@@ -35,7 +35,7 @@
 
         <h2>Download the Java Client</h2>
         
-        <a href="vortexscape.exe" download class="download-button">
+        <a href="vortexscape.zip" download class="download-button">
             Download VortexScape Client (Version 2)
         </a>
         <p>You need Java installed to run the client.</p>
