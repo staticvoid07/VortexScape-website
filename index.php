@@ -38,6 +38,10 @@
         <a href="vortexscape.zip" download class="download-button">
             Download VortexScape Client (Version 2)
         </a>
+        <p>or</p>
+        <a href="vortexscape.exe" download class="badge">
+            Download executable
+        </a>
         <p>You need Java installed to run the client.</p>
         <p>
             <a class="link" href="https://adoptium.net/temurin/releases">
