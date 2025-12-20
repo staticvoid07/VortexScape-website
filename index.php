@@ -13,12 +13,20 @@
 
     <div class="info-box">
         <p>A modified version of 2004scape that functions as an idle game.</p>
-        <p>
-            Everyone is an ironman, every item is stackable, and most skilling actions infinitely repeat. 
-            Resources never deplete, you don't lose items on death, and Hans will complete quests for you.
-        </p>
+        <details class="learn-more">
+            <summary>Learn More about VortexScape Mechanics</summary>
+            <div class="details-content">
+                <p>Everyone is an ironman, every item is stackable, and most skilling actions infinitely repeat.</p>
+                <p>Resources never deplete, you don't lose items on death, and Hans will complete quests for you for 100k each (you still get the quest reward), heroes and legends quest cost 500k.</p>
+                <p>Every skill has an idle way of being trained; agility courses auto-complete, fishing spots never move, and pickpocketing/stealing from stalls repeats automatically.</p>
+                <p>Some NPCs are always aggressive, all loot drops into your inventory and your prayer points never drain.</p>
+                <p>Please read the patch notes if you'd like to learn more.</p>
+            </div>
+        </details>
         
-        <div class="badge">This project is open source</div>
+        <a href="https://github.com/staticvoid07/Server" target="_blank" class="badge">
+            This project is open source.
+        </a>
     </div>
 
     <hr class="section-divider">
@@ -29,25 +37,22 @@
         <p style="color: #ff4444; font-weight: bold;">DO NOT FORGET YOUR PASSWORD. There is currently no way to reset them.</p>
     </div>
 
-    <div class="info-box">
-        <p>You can use the webclient, but it is not recommended as it may crash.</p>
-        <a href="#" class="webclient-link">Launch Webclient</a>
-    </div>
-
     <hr class="section-divider">
 
-    <h2>Download the Java Client</h2>
-    <p>We recommend using the Java client for the best experience.</p>
-    
-    <a href="VortexScape.exe" download class="download-button">
-        Download VortexScape Client (Version 1.01)
-    </a>
-    <p>You need Java installed to run the client.</p>
-    <p>
-        <a class="link" href="https://adoptium.net/temurin/releases">
-            Download Java
+    <div class="info-box" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px;">
+
+        <h2>Download the Java Client</h2>
+        <p>We recommend using the Java client for the best experience.</p>
+        
+        <a href="VortexScape.exe" download class="download-button">
+            Download VortexScape Client (Version 1.01)
         </a>
-    </p>
+        <p>You need Java installed to run the client.</p>
+        <p>
+            <a class="link" href="https://adoptium.net/temurin/releases">
+                Download Java
+            </a>
+        </p>
     </div>
     <div class="patch-notes-section">
         <h2>Changelog</h2>

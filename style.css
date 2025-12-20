@@ -220,10 +220,9 @@ h2 {
     text-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
 }
 
-/* Styling for your Open Source and Webclient buttons */
 .badge {
     display: inline-block;
-    padding: 4px 12px;
+    padding: 6px 16px; /* Slightly more padding for a better button feel */
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
@@ -231,6 +230,16 @@ h2 {
     border: 1px solid #ffcc00;
     color: #ffcc00;
     background: rgba(255, 204, 0, 0.1);
+    text-decoration: none; /* Removes the underline */
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(255, 204, 0, 0.25);
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.4);
+    transform: translateY(-2px); /* Makes it pop up slightly */
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
 .webclient-link {
@@ -253,4 +262,46 @@ h2 {
     height: 1px;
     background: linear-gradient(to right, transparent, #4a4f59, transparent);
     margin: 50px 0;
+}
+
+.learn-more {
+    background: rgba(60, 65, 76, 0.5); /* Semi-transparent background */
+    border: 1px solid #4a4f59;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left; /* Better for reading lists of mechanics */
+    overflow: hidden;
+}
+
+.learn-more summary {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #61dafb;
+    list-style: none; /* Removes default arrow in some browsers */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom arrow using a pseudo-element */
+.learn-more summary::after {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.learn-more[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.details-content {
+    padding: 0 20px 20px 20px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.details-content p {
+    margin-bottom: 10px;
 }
