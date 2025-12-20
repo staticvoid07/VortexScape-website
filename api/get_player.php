@@ -59,7 +59,7 @@ try {
 
     $data = [];
     if ($total) {
-        $data[] = ['name' => 'Total', 'level' => $total['level'], 'score' => $total['score']];
+        $data[] = ['id' => 0, 'name' => 'Total', 'level' => $total['level'], 'score' => $total['score']];
     }
 
     foreach ($skills as $s) {
