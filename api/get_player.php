@@ -64,6 +64,7 @@ try {
 
     foreach ($skills as $s) {
         $data[] = [
+            'id' => $s['skill_id'],
             'name' => $skill_map[$s['skill_id']] ?? "Skill " . $s['skill_id'],
             'level' => $s['level'],
             'score' => $s['score']
