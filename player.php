@@ -5,6 +5,7 @@
     <title>VortexScape Highscores</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <script src="functions.js"></script>
 </head>
 <body>
     <?php include 'navbar.php'; ?>
@@ -25,7 +26,7 @@
                 .then(res => res.json())
                 .then(data => {
                     if (data.success) {
-                        document.getElementById('player-name').innerText = data.player;
+                        document.getElementById('player-name').innerText = formatName(data.player);
                         let html = '';
                         data.stats.forEach(s => {
                             // We need the skill_id here. 

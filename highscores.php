@@ -5,6 +5,7 @@
     <title>VortexScape Highscores</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <script src="functions.js"></script>
 </head>
 <body>
 
@@ -86,22 +87,24 @@
             
             // Add a header row for clarity
             html += `<div class="score-entry" style="border-bottom: 2px solid #555;">
-                        <span class="score-rank">#</span>
-                        <span class="score-player">Player Name</span>
+                        <span class="score-rank">Rank</span>
+                        <span class="score-player">Player</span>
                         <span class="score-level">Level</span>
-                        <span class="score-value">Score</span>
+                        <span class="score-value">Experience</span>
                     </div>`;
 
             if (skill.scores.length === 0) {
                  html += '<p style="text-align:center;">No scores recorded yet.</p>';
             } else {
                  skill.scores.forEach(entry => {
+                    let displayName = formatName(entry.player);
+
                     html += `
                         <div class="score-entry">
                             <span class="score-rank">#${entry.rank}</span>
                             <span class="score-player">
                                 <a href="player.php?user=${encodeURIComponent(entry.player)}" class="player-link">
-                                    ${entry.player}
+                                    ${displayName}
                                 </a>
                             </span>
                             <span class="score-level">Lvl: ${entry.level}</span>
