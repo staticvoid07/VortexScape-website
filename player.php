@@ -28,13 +28,19 @@
                         document.getElementById('player-name').innerText = data.player;
                         let html = '';
                         data.stats.forEach(s => {
-                        html += `
-                            <div class="stat-row">
-                                <span class="stat-name">${s.name}</span>
-                                <span class="stat-lvl">Lvl ${s.level}</span>
-                                <span class="stat-val">${s.score.toLocaleString()}</span>
-                            </div>`;
-                    });
+                            // We need the skill_id here. 
+                            // If your get_player.php API doesn't send the ID yet, 
+                            // you might need to update that PHP script to include 'id' => $s['skill_id']
+                            html += `
+                                <div class="stat-row">
+                                    <span class="stat-name">
+                                        <img src="images/${s.id}.png" class="skill-icon" onerror="this.style.display='none'">
+                                        ${s.name}
+                                    </span>
+                                    <span class="stat-lvl">Lvl ${s.level}</span>
+                                    <span class="stat-val">${s.score.toLocaleString()}</span>
+                                </div>`;
+                        });
                         document.getElementById('stats-content').innerHTML = html;
                     } else {
                         document.getElementById('player-name').innerText = "Player not found";

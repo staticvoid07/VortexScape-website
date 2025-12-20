@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* 2. SHARED LAYOUT */
 .container {
     max-width: 800px;
     margin: 0 auto 40px auto;
@@ -29,8 +28,6 @@ h2 {
     margin: 20px 0;
 }
 
-/* 3. NAVIGATION BAR 
-   Since this is in style.css, it will look identical on all pages */
 .navbar {
     background-color: #1f2228;
     padding: 15px 0;
@@ -61,8 +58,6 @@ h2 {
     background-color: #4CAF50;
 }
 
-/* 4. HIGHSCORES & PLAYER TABLES 
-   Used in both highscores.php and player.php */
 .score-entry, .stat-row { 
     display: flex; 
     justify-content: space-between; 
@@ -82,7 +77,6 @@ h2 {
 .score-level, .stat-lvl { width: 20%; color: #ffcc00; font-weight: bold; text-align: center; }
 .score-value, .stat-val { width: 30%; color: #4CAF50; text-align: right; font-family: monospace; }
 
-/* 5. LINKS & BUTTONS */
 .player-link {
     color: #61dafb;
     text-decoration: none;
@@ -104,7 +98,6 @@ h2 {
     margin: 20px 0;
 }
 
-/* 6. TAB NAVIGATION (For highscores.php) */
 .tabs { 
     display: flex; 
     flex-wrap: wrap; 
@@ -168,7 +161,7 @@ h2 {
 }
 
 .download-button {
-    color: #ffffff !important; /* Force white text */
+    color: #ffffff !important;
     font-weight: bold;
     display: inline-block;
     background-color: #4CAF50;
@@ -181,4 +174,18 @@ h2 {
 .download-button:hover {
     background-color: #45a049;
     color: #ffffff !important;
+}
+
+.skill-icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.skill-board h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

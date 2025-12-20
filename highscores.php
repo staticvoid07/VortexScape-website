@@ -65,8 +65,11 @@
             const button = document.createElement('button');
             button.className = 'tab-button';
             button.id = `tab-${skillId}`;
-            button.textContent = skillName;
-            button.onclick = () => renderBoard(skillId); // Attach click handler
+            button.innerHTML = `
+                <img src="images/${skillId}.png" class="skill-icon" onerror="this.style.display='none'">
+                ${skillName}
+            `;
+            button.onclick = () => renderBoard(skillId);
             tabsContainer.appendChild(button);
 
             // --- B. Create Score Board (Content) ---
@@ -74,7 +77,12 @@
             board.className = 'skill-board';
             board.id = `board-${skillId}`;
             
-            let html = `<h2>${skillName} Highscores</h2>`;
+            let html = `
+                <h2>
+                    <img src="images/${skillId}.png" class="skill-icon" onerror="this.style.display='none'">
+                    ${skillName} Highscores
+                </h2>
+            `;
             
             // Add a header row for clarity
             html += `<div class="score-entry" style="border-bottom: 2px solid #555;">
