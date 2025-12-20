@@ -35,8 +35,8 @@
 
         <h2>Download the Java Client</h2>
         
-        <a href="VortexScape.exe" download class="download-button">
-            Download VortexScape Client (Version 1.01)
+        <a href="vortexscape.exe" download class="download-button">
+            Download VortexScape Client (Version 2)
         </a>
         <p>You need Java installed to run the client.</p>
         <p>
@@ -55,7 +55,7 @@
     </div>
 
     <hr class="section-divider">
-
+    
     <div class="patch-notes-section">
         <h2>Patch notes</h2>
         <div class="patch-version">Dec. 11th 2025</div>
