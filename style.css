@@ -204,3 +204,53 @@ h2 {
     color: #61dafb; 
     text-align: left;
 }
+
+.info-box {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    line-height: 1.8; /* Adds breathing room between lines of text */
+    color: #cccccc;
+    font-size: 1.05rem;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
+}
+
+/* Styling for your Open Source and Webclient buttons */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 10px 0;
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+    background: rgba(255, 204, 0, 0.1);
+}
+
+.webclient-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffcc00;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffcc00;
+    transition: all 0.3s;
+}
+
+.webclient-link:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Adds a divider between info and download */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #4a4f59, transparent);
+    margin: 50px 0;
+}
