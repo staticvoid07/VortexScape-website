@@ -35,7 +35,7 @@
 
         <h2>Download the Java Client</h2>
         
-        <a href="vortexscape-java-cliet.zip" download class="download-button">
+        <a href="vortexscape-java-client.zip" download class="download-button">
             Download VortexScape Client (Version 2)
         </a>
         <p>or</p>
