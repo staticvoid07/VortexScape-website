@@ -132,6 +132,15 @@
             <li>essence mining changed to 2 essence per mine on average at 85 or higher runecraft</li>
             <li>essence mining changed to 2.5 essence per mine on average at 99 runecraft, to match daeyalt mining rates on osrs</li>
         </ul>
+        <div class="patch-version">Dec. 20th 2025</div>
+        <ul class="patch-list">
+            <li>increased thieving delays of stalls to make them a viable idle method</li>
+            <li>removed the ability to click thieving stalls repeatedly for faster xp</li>
+            <li>ranged ammo will automatically be picked up after it's used</li>
+            <li>changed crafting and herblore skill delays to match osrs, as they had no delays in 2004</li>
+            <li>deployed more changes from this revision, including troll stronghold, law runecrafting and KQ</li>
+            <li>Hans can now complete every quest available in the quest journal</li>
+        </ul>
         <h2>Aggressive NPC list</h2>
         <ul class="patch-list">
             <li>chickens</li>
