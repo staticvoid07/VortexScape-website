@@ -36,9 +36,9 @@
                                 <div class="stat-row">
                                     <span class="stat-name">
                                         <img src="images/${s.id}.png" class="skill-icon" onerror="this.style.display='none'">
-                                        ${s.name}
+                                        ${formatName(s.name)}
                                     </span>
-                                    <span class="stat-lvl">Lvl ${s.level}</span>
+                                    <span class="stat-lvl">Level ${s.level}</span>
                                     <span class="stat-val">${s.score.toLocaleString()}</span>
                                 </div>`;
                         });

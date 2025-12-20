@@ -182,14 +182,25 @@ h2 {
     color: #ffffff !important;
 }
 
-.skill-icon {
-    width: 20px;
-    height: 20px;
+.stat-row .skill-icon {
+    width: 24px;
+    height: 24px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .skill-board h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.stat-name { 
+    flex: 2; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold; 
+    color: #61dafb; 
+    text-align: left;
 }

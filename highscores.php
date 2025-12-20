@@ -107,7 +107,7 @@
                                     ${displayName}
                                 </a>
                             </span>
-                            <span class="score-level">Lvl: ${entry.level}</span>
+                            <span class="score-level">${entry.level}</span>
                             <span class="score-value">${entry.score.toLocaleString()}</span>
                         </div>
                     `;
