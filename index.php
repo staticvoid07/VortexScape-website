@@ -42,7 +42,6 @@
     <div class="info-box" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px;">
 
         <h2>Download the Java Client</h2>
-        <p>We recommend using the Java client for the best experience.</p>
         
         <a href="VortexScape.exe" download class="download-button">
             Download VortexScape Client (Version 1.01)
@@ -55,7 +54,7 @@
         </p>
     </div>
     <div class="patch-notes-section">
-        <h2>Changelog</h2>
+        <h2>Patch notes</h2>
         <div class="patch-version">Dec. 11th 2025</div>
         <ul class="patch-list">
             <li>removed prayer drain</li>
