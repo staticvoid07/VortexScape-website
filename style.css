@@ -282,10 +282,12 @@ h2 {
     cursor: pointer;
     font-weight: bold;
     color: #61dafb;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker header */
+    
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Keeps the title centered */
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 /* Custom arrow using a pseudo-element */
@@ -300,11 +302,25 @@ h2 {
 }
 
 .details-content {
-    padding: 0 20px 20px 20px;
+    padding: 20px 30px; /* More horizontal padding for breathing room */
     color: #cccccc;
-    line-height: 1.6;
+    line-height: 1.7;    /* Increased line height for readability */
+    
+    /* THE FIX: Left align text but keep the box centered */
+    text-align: left; 
 }
 
 .details-content p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px; /* Room for a custom bullet point */
+}
+
+/* Optional: Add a subtle custom bullet to make it look like a list of features */
+.details-content p::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #61dafb; /* Matches your blue theme color */
+    font-weight: bold;
 }
