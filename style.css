@@ -1,6 +1,3 @@
-/* ===============================================
-   1. UNIVERSAL RESET & BASE STYLES
-   =============================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,15 +12,22 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto 40px auto;
     padding: 20px;
     text-align: center;
 }
 
-/* ===============================================
-   2. SHARED NAVIGATION BAR (Standardized)
-   =============================================== */
+h1 {
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffcc00;
+    margin: 20px 0;
+}
+
 .navbar {
     background-color: #1f2228;
     padding: 15px 0;
@@ -54,14 +58,11 @@ body {
     background-color: #4CAF50;
 }
 
-/* ===============================================
-   3. HIGHSCORE & PLAYER TABLES
-   =============================================== */
 .score-entry, .stat-row { 
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    padding: 12px 15px; 
+    padding: 10px 15px; 
     border-bottom: 1px solid #4a4f59;
     background-color: #3c414c;
     transition: background 0.2s;
@@ -71,53 +72,37 @@ body {
     background-color: #444a56;
 }
 
-/* Column Widths & Alignments */
 .score-rank { width: 10%; font-weight: bold; text-align: left; }
+.score-player, .stat-name { width: 40%; text-align: left; font-weight: bold; }
+.score-level, .stat-lvl { width: 20%; color: #ffcc00; font-weight: bold; text-align: center; }
+.score-value, .stat-val { width: 30%; color: #4CAF50; text-align: right; font-family: monospace; }
 
-.score-player, .stat-name { 
-    width: 40%; 
-    text-align: left; 
-    font-weight: bold; 
-    display: flex; 
-    align-items: center; 
-    gap: 12px;
+.player-link {
+    color: #61dafb;
+    text-decoration: none;
 }
 
-.score-level, .stat-lvl { 
-    width: 20%; 
-    color: #ffcc00; 
-    font-weight: bold; 
-    text-align: center; 
-    font-size: 1.1em;
+.player-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
 }
 
-.score-value, .stat-val { 
-    width: 30%; 
-    color: #4CAF50; 
-    text-align: right; 
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: 1.25em;
-    font-weight: 800;
-    font-variant-numeric: tabular-nums;
-    text-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+.download-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 20px 0;
 }
 
-/* Skill Icons */
-.skill-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-/* ===============================================
-   4. TABS (Highscores Page)
-   =============================================== */
 .tabs { 
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .tab-button {
@@ -130,147 +115,258 @@ body {
     border-radius: 4px;
     display: inline-flex;
     align-items: center; 
+    justify-content: center;
     gap: 8px;
+    
     transition: all 0.2s ease;
 }
 
 .tab-button.active {
     background-color: #3c414c;
     color: #ffcc00;
-    box-shadow: inset 0 -2px 0 #ffcc00;
+    box-shadow: inset 0 -2px 0 #ffcc00; /* Cleaner than a standard border-bottom */
 }
 
-/* ===============================================
-   5. INDEX PAGE (Landing Page)
-   =============================================== */
-.welcome-title {
-    font-size: 2.5rem;
-    color: #61dafb;
-    margin-bottom: 20px;
+.patch-notes-section {
+    text-align: left;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #333740;
 }
 
-.info-box {
-    max-width: 750px;
-    margin: 0 auto 30px auto;
+.patch-version {
+    color: #ffcc00;
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+}
+
+.patch-list {
+    margin-left: 20px;
+    margin-top: 5px;
     color: #cccccc;
 }
 
+.link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 12px;
+    background-color: #1f2228;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #4a4f59;
+}
+
+.link:hover {
+    background-color: #ffcc00;
+    color: #282c34;
+}
+
 .download-button {
+    color: #ffffff !important;
+    font-weight: bold;
     display: inline-block;
     background-color: #4CAF50;
-    color: white !important;
-    padding: 18px 36px;
-    text-decoration: none;
-    font-size: 1.3em;
-    font-weight: bold;
-    border-radius: 8px;
-    margin: 25px 0;
-    transition: transform 0.2s, background 0.3s;
+    padding: 15px 32px;
+    text-decoration: none !important;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 .download-button:hover {
     background-color: #45a049;
-    transform: scale(1.05);
+    color: #ffffff !important;
+}
+
+.stat-row .skill-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.skill-board h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-name { 
+    flex: 2; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold; 
+    color: #61dafb; 
+    text-align: left;
+}
+
+.info-box {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    line-height: 1.8; /* Adds breathing room between lines of text */
+    color: #cccccc;
+    font-size: 1.05rem;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
 }
 
 .badge {
     display: inline-block;
-    padding: 6px 16px;
+    padding: 6px 16px; /* Slightly more padding for a better button feel */
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
+    margin: 10px 0;
     border: 1px solid #ffcc00;
     color: #ffcc00;
     background: rgba(255, 204, 0, 0.1);
-    text-decoration: none;
+    text-decoration: none; /* Removes the underline */
     transition: all 0.3s ease;
 }
 
 .badge:hover {
     background: rgba(255, 204, 0, 0.25);
-    color: #ffffff;
     box-shadow: 0 0 12px rgba(255, 204, 0, 0.4);
+    transform: translateY(-2px); /* Makes it pop up slightly */
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
-/* ===============================================
-   6. LEARN MORE DROPDOWN (Details/Summary)
-   =============================================== */
+.webclient-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffcc00;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffcc00;
+    transition: all 0.3s;
+}
+
+.webclient-link:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Adds a divider between info and download */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #4a4f59, transparent);
+    margin: 50px 0;
+}
+
 .learn-more {
+    /* Existing background and border styles... */
     background: rgba(60, 65, 76, 0.5);
     border: 1px solid #4a4f59;
     border-radius: 8px;
-    margin: 20px auto;
-    max-width: 750px;
-    display: block;
-    overflow: hidden;
-    transition: background 0.3s;
-}
 
-.learn-more[open] { background: rgba(60, 65, 76, 0.8); }
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+    
+    overflow: hidden;
+}
 
 .learn-more summary {
     padding: 15px;
     cursor: pointer;
     font-weight: bold;
     color: #61dafb;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker header */
+    
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Keeps the title centered */
     align-items: center;
-    gap: 15px;
-    list-style: none;
+    gap: 10px;
 }
 
+/* Custom arrow using a pseudo-element */
 .learn-more summary::after {
     content: '▶';
     font-size: 0.8rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-.learn-more[open] summary::after { transform: rotate(90deg); }
+.learn-more[open] summary::after {
+    transform: rotate(90deg);
+}
 
 .details-content {
-    padding: 20px 40px;
-    text-align: left;
+    padding: 20px 30px; /* More horizontal padding for breathing room */
     color: #cccccc;
-    line-height: 1.8;
+    line-height: 1.7;    /* Increased line height for readability */
+    
+    /* THE FIX: Left align text but keep the box centered */
+    text-align: left; 
 }
 
 .details-content p {
     margin-bottom: 15px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 20px; /* Room for a custom bullet point */
 }
 
+/* Optional: Add a subtle custom bullet to make it look like a list of features */
 .details-content p::before {
     content: '•';
     position: absolute;
     left: 0;
-    color: #61dafb;
+    color: #61dafb; /* Matches your blue theme color */
+    font-weight: bold;
 }
 
-/* Animations */
+/* 1. Define the animation */
 @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); max-height: 0; }
-    to { opacity: 1; transform: translateY(0); max-height: 600px; }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 500px; /* Large enough for your text */
+    }
 }
 
-@keyframes slideUp {
-    from { opacity: 1; transform: translateY(0); max-height: 600px; }
-    to { opacity: 0; transform: translateY(-10px); max-height: 0; }
+/* 2. Apply it to the content box when open */
+.learn-more[open] .details-content {
+    animation: slideDown 0.4s ease-out forwards;
+    overflow: hidden;
 }
 
-.learn-more[open] .details-content { animation: slideDown 0.4s ease-out forwards; }
-.learn-more.is-closing .details-content { animation: slideUp 0.4s ease-in forwards; }
-
-/* ===============================================
-   7. MISC
-   =============================================== */
-.player-link {
-    color: #61dafb;
-    text-decoration: none;
+/* 3. Smooth the arrow rotation */
+.learn-more summary::after {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease; /* Adds the spin animation to the arrow */
 }
 
-.player-link:hover {
-    text-decoration: underline;
-    color: #ffffff;
+.learn-more[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.learn-more {
+    background: rgba(60, 65, 76, 0.5);
+    border: 1px solid #4a4f59;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 700px;
+    display: block;
+    transition: all 0.3s ease; /* Smooths the background/border changes */
+}
+
+.learn-more[open] {
+    background: rgba(60, 65, 76, 0.8); /* Slightly darker when open for focus */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
