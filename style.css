@@ -371,19 +371,21 @@ h2 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Container to center the button */
 .social-links {
     display: flex;
-    justify-content: center; /* Centers the button horizontally */
-    margin: 30px 0;         /* Adds space above and below */
+    justify-content: center;
+    margin: 20px 0;
 }
 
+/* The Button Styling */
 .discord-button {
     display: inline-flex;
     align-items: center;
     background-color: #5865F2; /* Official Discord Blurple */
-    color: #ffffff !important; /* Force text to white */
+    color: #ffffff !important; /* Force text to be white */
     padding: 12px 24px;
-    text-decoration: none;    /* Removes the blue underline */
+    text-decoration: none !important; /* Removes the underline */
     font-weight: bold;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -392,7 +394,7 @@ h2 {
 
 .discord-button:hover {
     background-color: #4752C4;
-    transform: translateY(-2px); /* Slight pop-up effect */
+    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
     color: #ffffff !important;
 }
