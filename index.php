@@ -157,7 +157,7 @@
         </ul>
         <div class="patch-version">Dec. 23rd 2025</div>
         <ul class="patch-list">
-            <li>added blue dragon scales to druid pickpocketing</li>
+            <li>added blue dragon scales to druid pickpocket table</li>
         </ul>
         <h2>Aggressive NPC list</h2>
         <ul class="patch-list">
