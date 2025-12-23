@@ -380,7 +380,7 @@ h2 {
 
 /* The Button Styling */
 .discord-button {
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     background-color: #5865F2; /* Official Discord Blurple */
     color: #ffffff !important; /* Force text to be white */
