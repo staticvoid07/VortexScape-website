@@ -26,10 +26,6 @@
                 <p style="text-align: center; color: #ffcc00; padding-left: 0;"><i>Please read the patch notes if you'd like to learn more.</i></p>
             </div>
         </details>
-        
-        <a href="https://github.com/staticvoid07/Server" target="_blank" class="badge">
-            This project is open source.
-        </a>
     </div>
 
     <div class="social-links">
@@ -69,6 +65,10 @@
         <p>Open the client and click "Existing User". Type a username and password; if it doesn't exist, you will be registered automatically.</p>
         <p style="color: #ff4444; font-weight: bold;">DO NOT FORGET YOUR PASSWORD. There is currently no way to reset them.</p>
     </div>
+
+    <a href="https://github.com/staticvoid07/Server" target="_blank" class="badge">
+        This project is open source.
+    </a>
 
     <hr class="section-divider">
     
