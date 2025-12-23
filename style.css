@@ -371,31 +371,28 @@ h2 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.social-links {
+    display: flex;
+    justify-content: center; /* This centers the button */
+    margin: 20px 0;
+}
+
 .discord-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background-color: #5865F2; /* Official Discord Blue */
-    color: white !important;
+    color: #ffffff !important; /* Forces text to stay white */
     padding: 12px 24px;
-    text-decoration: none;
+    text-decoration: none; /* Removes that "weird" underline */
     font-weight: bold;
-    border-radius: 5px;
-    margin: 10px;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 14px rgba(88, 101, 242, 0.4);
+    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
 }
 
 .discord-button:hover {
     background-color: #4752C4;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
-}
-
-/* Container to handle spacing of multiple badges/buttons */
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
+    color: #ffffff !important;
 }
