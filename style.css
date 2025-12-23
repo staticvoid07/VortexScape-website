@@ -370,3 +370,32 @@ h2 {
     background: rgba(60, 65, 76, 0.8); /* Slightly darker when open for focus */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+.discord-button {
+    display: inline-block;
+    background-color: #5865F2; /* Official Discord Blue */
+    color: white !important;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 14px rgba(88, 101, 242, 0.4);
+}
+
+.discord-button:hover {
+    background-color: #4752C4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+}
+
+/* Container to handle spacing of multiple badges/buttons */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
