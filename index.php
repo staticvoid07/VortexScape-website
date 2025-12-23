@@ -155,6 +155,10 @@
             <li>fixed weapon unequipping game crash</li>
             <li>guards and stall owners no longer aggro when stealing from stalls</li>
         </ul>
+        <div class="patch-version">Dec. 23rd 2025</div>
+        <ul class="patch-list">
+            <li>added blue dragon scales to druid pickpocketing</li>
+        </ul>
         <h2>Aggressive NPC list</h2>
         <ul class="patch-list">
             <li>chickens</li>
