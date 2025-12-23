@@ -390,6 +390,12 @@ h2 {
     border-radius: 8px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+
+    /* THE FIX FOR CENTERING */
+    display: inline-flex;    /* Keeps button size to content */
+    align-items: center;     /* Perfectly aligns icon and text vertically */
+    justify-content: center; /* Centers items horizontally */
+    gap: 12px;               /* Precise space between icon and text */
 }
 
 .discord-button:hover {
@@ -397,4 +403,8 @@ h2 {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
     color: #ffffff !important;
+}
+
+.discord-button svg {
+    flex-shrink: 0; /* Prevents the icon from squishing */
 }
