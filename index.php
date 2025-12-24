@@ -78,6 +78,8 @@
         <ul class="patch-list">
             <li>fixed a bug with an engine script that caused clients to crash on some actions</li>
             <li>removed the barcrawl requirement for the barbarian agility course</li>
+            <li>removed the table on the upper floor of the chaos druid tower</li>
+            <li>replaced the dark wizards in the dark wizard tower with chaos druids</li>
         </ul>
         <div class="patch-version">Dec. 24th 2025</div>
         <ul class="patch-list">
