@@ -74,6 +74,11 @@
     
     <div class="patch-notes-section">
         <h2>Patch notes</h2>
+        <div class="patch-version">Dec. 26th 2025</div>
+        <ul class="patch-list">
+            <li>fixed a bug with an engine script that caused clients to crash on some actions</li>
+            <li>removed the barcrawl requirement for the barbarian agility course</li>
+        </ul>
         <div class="patch-version">Dec. 24th 2025</div>
         <ul class="patch-list">
             <li>fixed fletching delays to match osrs</li>
