@@ -74,6 +74,11 @@
     
     <div class="patch-notes-section">
         <h2>Patch notes</h2>
+        <div class="patch-version">Dec. 24th 2025</div>
+        <ul class="patch-list">
+            <li>fixed fletching delays to match osrs</li>
+            <li>added buy-5000 option</li>
+        </ul>
         <div class="patch-version">Dec. 23rd 2025</div>
         <ul class="patch-list">
             <li>added blue dragon scales to druid pickpocket table</li>
