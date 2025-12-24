@@ -78,6 +78,8 @@
         <ul class="patch-list">
             <li>fixed fletching delays to match osrs</li>
             <li>added buy-5000 option</li>
+            <li>clue scrolls drop as reward caskets, and are stackable</li>
+            <li>added some npcs to aggro list for clue casket farming</li>
         </ul>
         <div class="patch-version">Dec. 23rd 2025</div>
         <ul class="patch-list">
@@ -182,6 +184,10 @@
             <li>black dragons</li>
             <li>salarin the twisted</li>
             <li>shadow warriors</li>
+            <li>rogues</li>
+            <li>ice warriors</li>
+            <li>greater demons</li>
+            <li>hellhounds</li>
         </ul>
     </div>
 
