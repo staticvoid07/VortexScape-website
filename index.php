@@ -80,6 +80,9 @@
             <li>removed the barcrawl requirement for the barbarian agility course</li>
             <li>removed the table on the upper floor of the chaos druid tower</li>
             <li>replaced the dark wizards in the dark wizard tower with chaos druids</li>
+            <li>fixed flax picking stopping randomly</li>
+            <li>stringing bows no longer duplicates them</li>
+            <li>every hour there's a chance a holiday item will appear in your bank, good luck!</li>
         </ul>
         <div class="patch-version">Dec. 24th 2025</div>
         <ul class="patch-list">
