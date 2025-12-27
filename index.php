@@ -78,6 +78,8 @@
         <ul class="patch-list">
             <li>removed attack option on druids</li>
             <li>fixed issue with multiple players using the same agility shorcut</li>
+            <li>replaced the chaos druids next to salarin the twisted with more salarin the twisted</li>
+            <li>removed christmas event</li>
         </ul>
         <div class="patch-version">Dec. 25th 2025</div>
         <ul class="patch-list">
